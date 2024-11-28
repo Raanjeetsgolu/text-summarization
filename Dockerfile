@@ -15,7 +15,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the application code and data files with proper ownership in a single command
-COPY --chown=1001:1001 app.py t5_samsum_summarization /app/
+COPY --chown=1001:1001 app.py  /app/
 COPY --chown=1001:1001  t5_samsum_summarization /app/t5_samsum_summarization
 # Switch to a non-root user for better security
 USER 1001
